@@ -25,7 +25,8 @@ var ua = navigator.userAgent.toLowerCase();
 if (ua.indexOf('safari') != -1) {
     if (ua.indexOf('chrome') > -1) {
         alert("1") // Chrome
-    } else {
+    }
+    else {
         alert("2") // Safari
     }
 }
