@@ -1,0 +1,73 @@
+{
+    "sentence":
+    [{
+        "Phrase": "Siku njema! Tafadhali nipe maji.",
+        "Language": "Swahili",
+        "hint": ["", "", ""],
+        "Translation": "Have a good day! Please give me some water."
+    },
+    
+    {
+        "Phrase": "",
+        "Language": "Hausa",
+        "hint": ["", "", ""],
+        "Translation": "Do you want to? I want to. Are you coming or not?"
+    },
+
+    {
+        "Phrase": "",
+        "Language": "Amharic",
+        "hint": ["", "", ""],
+        "Translation": "Thank you very much! How are you?"
+    },
+
+    {
+        "Phrase": "",
+        "Language": "Mandarin",
+        "hint": ["", "", ""],
+        "Translation": "I live in Beijing. Do you also live in Beijing?"
+    },
+
+    {
+        "Phrase": "",
+        "Language": "Hindi",
+        "hint": ["", "", ""],
+        "Translation": "How are you? I am fine. What is your name?"
+    },
+
+    {
+        "Phrase": "",
+        "Language": "Arabic",
+        "hint": ["", "", ""],
+        "Translation": "I am interested in learning Arabic language. Are you an Arabic speaker?"
+    },
+
+    {
+        "Phrase": "",
+        "Language": "English",
+        "hint": ["", "", ""],
+        "Translation": "Would you like to go out to eat tonight?"
+    },
+
+    {
+        "Phrase": "",
+        "Language": "Spanish",
+        "hint": ["", "", ""],
+        "Translation": "What time is it? It's 2:30 in the afternoon. Do you like to dance salsa?"
+    },
+
+    {
+        "Phrase": "",
+        "Language": "French",
+        "hint": ["", "", ""],
+        "Translation": ""
+    },
+
+    {
+        "Phrase": "",
+        "Language": "German",
+        "hint": ["", "", ""],
+        "Translation": ""
+    }
+    ]
+}
