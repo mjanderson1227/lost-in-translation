@@ -1,10 +1,28 @@
+Copy code
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Website</title>
+    <title>Language Guessing App</title>
 </head>
 <body>
-
+<h1>Language Guessing App</h1>
+<form>
+    <label for="text-input">Input Text:</label>
+    <input type="text" id="text-input" name="text-input"><br><br>
+    <input type="submit" value="Send" onclick="guessLanguage(); return false;"><br><br>
+    <label for="language-dropdown">Show All Languages:</label>
+    <select id="language-dropdown" name="language-dropdown">
+        <option value="all">All Languages</option>
+        <option value="english">English</option>
+        <option value="french">French</option>
+        <option value="german">German</option>
+        <option value="spanish">Spanish</option>
+    </select>
+</form>
+<script>
+    function guessLanguage() {
+        // Code to guess language based on input text
+    }
+</script>
 </body>
 </html>
