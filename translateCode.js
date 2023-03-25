@@ -23,6 +23,7 @@ if (userLanguage.toLowerCase() === correctLanguage.toLowerCase()) {
 } else {
     alert(`Sorry, the correct answer was ${correctLanguage}.`);
 }
+
 var ua = navigator.userAgent.toLowerCase();
 if (ua.indexOf('safari') != -1) {
     if (ua.indexOf('chrome') > -1) {
@@ -33,7 +34,8 @@ if (ua.indexOf('safari') != -1) {
     }
 }
 function playAudio() {
-    x.play();
+    var audio = new Audio('Bugatti_5sec.mp3');
+    audio.play();
 }
-var x = document.getElementById("myBugatti");
+
 
