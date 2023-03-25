@@ -21,3 +21,11 @@ if (userLanguage.toLowerCase() === correctLanguage.toLowerCase()) {
 } else {
     alert(`Sorry, the correct answer was ${correctLanguage}.`);
 }
+var ua = navigator.userAgent.toLowerCase();
+if (ua.indexOf('safari') != -1) {
+    if (ua.indexOf('chrome') > -1) {
+        alert("1") // Chrome
+    } else {
+        alert("2") // Safari
+    }
+}
