@@ -18,6 +18,8 @@ const userLanguage = prompt(`What language is this sentence written in? \n\n"${r
 // Check if the user's answer is correct and provide feedback
 if (userLanguage.toLowerCase() === correctLanguage.toLowerCase()) {
     alert("Correct!");
+    playAudio();
+
 } else {
     alert(`Sorry, the correct answer was ${correctLanguage}.`);
 }
@@ -29,3 +31,8 @@ if (ua.indexOf('safari') != -1) {
         alert("2") // Safari
     }
 }
+function playAudio() {
+    x.play();
+}
+var x = document.getElementById("myBugatti");
+
