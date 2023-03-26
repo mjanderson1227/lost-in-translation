@@ -11,7 +11,6 @@ function winCheck()
 {
     if (userLanguage.toLowerCase() === correctLanguage.toLowerCase()) {
         alert("Correct!");
-        playAudio();
     
     } else {
         alert(`Sorry, the correct answer was ${correctLanguage}.`);
@@ -23,11 +22,7 @@ function winCheck()
 const randomIndex = Math.floor(Math.random() * sentences.length);
 const randomSentence = sentences[randomIndex].sentence;
 const correctLanguage = sentences[randomIndex].language;
-function playAudio() 
-/*{
-    const audio = new Audio('Bugatti_5sec.mp3');
-    audio.play(); 
-}*/
+
 
 // Prompt the user to input the corresponding language
 const userLanguage = prompt(`What language is this sentence written in? \n\n"${randomSentence}"`);
