@@ -1,26 +1,3 @@
-/*// Import the functions needed from SDKs
-import { initializeApp } from "firebase/app";
-
-// Our web server's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
-const firebaseConfig = {
-  apiKey: "AIzaSyBpH9oyqzBc_ybC6Nl3nDZLnfVX_K73mdo",
-  authDomain: "hack-street-boys.firebaseapp.com",
-  projectId: "hack-street-boys",
-  storageBucket: "hack-street-boys.appspot.com",
-  messagingSenderId: "557447864702",
-  appId: "1:557447864702:web:be42c654de7811ce87d32f",
-  measurementId: "G-C77PK82KZW"
-};
-
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-
-// Get a reference to the database service
-const db = getFirestore(app);*/
-
-//////////////////////////////
-
 // Define a list of sentences and their corresponding languages
 let sentences = []
 
