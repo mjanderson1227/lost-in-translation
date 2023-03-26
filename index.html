@@ -7,10 +7,17 @@
 <body>
 <div class="child">
 <h1>Language Guessing App</h1>
+
+    <div id="sentenceID"></div><br>
+    <div id="win">Did you win?</div> <br>
+    <div id="countID"> count</div>
+
+
+
 <form>
-    <label for="text-input">Input Text:</label>
+    <label for="text-input">Language:</label>
     <input type="text" id="text-input" name="text-input"><br><br>
-    <input type="submit" value="Send" onclick="guessLanguage(); return false;"><br><br>
+    <input id = "submit" type="submit" value="Check"><br><br>
     <label for="language-dropdown">Show All Languages:</label>
     <select id="language-dropdown" name="language-dropdown">
         <option value="all">All Languages</option>
@@ -23,11 +30,15 @@
 </div>
 <script>
     function guessLanguage() {
-        // Code to guess language based on input text
+
     }
+    
+    
 
 </script>
 <script src="translateCode.js"></script>
 
+
 </body>
+
 </html>
