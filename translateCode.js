@@ -22,6 +22,8 @@ function winCheck(userLanguage, correctLanguage)
     } else {
         //alert(`Sorry, the correct answer was ${correctLanguage}.`);
         document.getElementById("win").innerHTML=`Sorry, the correct answer was ${correctLanguage}.`
+        //SAVE COUNT TO DATABASE
+        count = 0;
     }
     console.log(count)
 }
@@ -38,9 +40,7 @@ function sentenceSelect() {
     return corrSentence;
 }
 
-async function sentencePrompt(){
-    await getData();
-
+function sentencePrompt(){
     // Prompt the user to input the corresponding language
     const sen = sentenceSelect()
     document.getElementById("sentenceID").innerHTML = sen.sentence;
@@ -52,6 +52,7 @@ async function sentencePrompt(){
         const userLanguage = document.getElementById("text-input").value;
         console.log(userLanguage)
         winCheck(userLanguage,sen.language);
+        document.getElementById("text-input").value = ""
         document.getElementById("countID").innerHTML = `Streak: ${Number(count)}`;
     }
     )
@@ -60,9 +61,19 @@ async function sentencePrompt(){
 
 
 }
+async function main()
+{
+    await getData();
+    sentencePrompt()
+    while(count>0){
+        sentencePrompt()
+    }
 
 
-sentencePrompt()
+}
+
+
+main();
 
 
 /*var ua = navigator.userAgent.toLowerCase();
