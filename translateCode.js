@@ -7,28 +7,35 @@ const sentences = [
     { sentence: "こんにちは、お元気ですか？", language: "Japanese" },
 ];
 
+function winCheck()
+{
+    if (userLanguage.toLowerCase() === correctLanguage.toLowerCase()) {
+        alert("Correct!");
+        playAudio();
+    
+    } else {
+        alert(`Sorry, the correct answer was ${correctLanguage}.`);
+    }
+
+}
+
 // Select a random sentence from the list
 const randomIndex = Math.floor(Math.random() * sentences.length);
 const randomSentence = sentences[randomIndex].sentence;
 const correctLanguage = sentences[randomIndex].language;
 function playAudio() 
-{
+/*{
     const audio = new Audio('Bugatti_5sec.mp3');
     audio.play(); 
-}
+}*/
 
 // Prompt the user to input the corresponding language
 const userLanguage = prompt(`What language is this sentence written in? \n\n"${randomSentence}"`);
 
 // Check if the user's answer is correct and provide feedback
-if (userLanguage.toLowerCase() === correctLanguage.toLowerCase()) {
-    alert("Correct!");
 
-} else {
-    alert(`Sorry, the correct answer was ${correctLanguage}.`);
-}
 
-var ua = navigator.userAgent.toLowerCase();
+/*var ua = navigator.userAgent.toLowerCase();
 if (ua.indexOf('safari') != -1) {
     if (ua.indexOf('chrome') > -1) {
         alert("1") // Chrome
@@ -36,11 +43,7 @@ if (ua.indexOf('safari') != -1) {
     else {
         alert("2") // Safari
     }
-}
+}*/
 
-<<<<<<< HEAD
-=======
-
->>>>>>> cab36faead9d9e536cc8d23adeeacf7221e350db
 
 
