@@ -7,15 +7,9 @@ const sentences = [
     { sentence: "こんにちは、お元気ですか？", language: "Japanese" },
 ];
 
-function randomSentence(sentence)
-{
-    // Select a random sentence from the list
-    const randomIndex = Math.floor(Math.random() * sentences.length);
-    const randomSentence = sentences[randomIndex].sentence;
-    const correctLanguage = sentences[randomIndex].language;
-}
 function winCheck()
 {
+    // Check if the user's answer is correct and provide feedback
     if (userLanguage.toLowerCase() === correctLanguage.toLowerCase()) {
         alert("Correct!");
     
@@ -25,13 +19,20 @@ function winCheck()
 
 }
 
+// Select a random sentence from the list
+const randomIndex = Math.floor(Math.random() * sentences.length);
+const randomSentence = sentences[randomIndex].sentence;
+const correctLanguage = sentences[randomIndex].language;
+
+
+function sentencePrompt(){
+    // Prompt the user to input the corresponding language
+    const userLanguage = prompt(`What language is this sentence written in? \n\n"${randomSentence}"`);
+
+}
 
 
 
-// Prompt the user to input the corresponding language
-const userLanguage = prompt(`What language is this sentence written in? \n\n"${randomSentence}"`);
-
-// Check if the user's answer is correct and provide feedback
 
 
 /*var ua = navigator.userAgent.toLowerCase();
