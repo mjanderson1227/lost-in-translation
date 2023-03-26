@@ -1,4 +1,4 @@
-// Import the functions needed from SDKs
+/*// Import the functions needed from SDKs
 import { initializeApp } from "firebase/app";
 
 // Our web server's Firebase configuration
@@ -17,7 +17,7 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 
 // Get a reference to the database service
-const db = getFirestore(app);
+const db = getFirestore(app);*/
 
 //////////////////////////////
 
