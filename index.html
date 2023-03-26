@@ -9,17 +9,19 @@
 <h1>Language Guessing App</h1>
 
     <div id="sentenceID"></div><br>
-    <div id="win">Did you win?</div> <br>
-    <div id="countID"> count</div>
+    <div id="win">Did you win? (delete this)</div> <br>
+    <div id="countID">Streak: 0</div>
 
 
 
 <form onsubmit="return false">
-    <label for="text-input">Language:</label>
-    <input type="text" id="text-input" name="text-input"><br><br>
+    <label>Language:</label>
+<!--    <input type="text" id="text-input" name="text-input"><br><br>-->
+    <input type = 'text' list="language-dropdown" id="text-input" placeholder="Type a language...">
+
     <input id = "submit" type="submit" value="Check"><br><br>
-    <label for="language-dropdown">Show All Languages:</label>
-    <select id="language-dropdown" name="language-dropdown">
+<!--    <label for="language-dropdown">Show All Languages:</label>-->
+    <datalist id="language-dropdown" >
         <option value="all">All Languages</option>
         <option value="english">English</option>
         <option value="french">French</option>
@@ -34,7 +36,7 @@
         <option value="hausa">Hausa</option>
         <option value="Swahili">Swahili</option>
 
-    </select>
+    </datalist>
 </form>
 </div>
 <script>

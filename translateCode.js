@@ -50,8 +50,9 @@ async function sentencePrompt(){
     let button = document.getElementById("submit")
     button.addEventListener('click', function() {
         const userLanguage = document.getElementById("text-input").value;
+        console.log(userLanguage)
         winCheck(userLanguage,sen.language);
-        document.getElementById("countID").innerHTML = Number(count);
+        document.getElementById("countID").innerHTML = `Streak: ${Number(count)}`;
     }
     )
 
