@@ -27,6 +27,7 @@ function winCheck(userLanguage, correctLanguage)
         document.getElementById("win").innerHTML=`Sorry, the correct answer was ${correctLanguage}.`
         //SAVE COUNT TO DATABASE
         count = 0;
+        document.getElementById("hintID").innerHTML = sentences.hint2;
     }
 
     console.log(count)
@@ -39,9 +40,13 @@ function sentenceSelect() {
     const randomIndex = Math.floor(Math.random() * sentences.length);
     const randomSentence = sentences[randomIndex].sentence;
     const correctLanguage = sentences[randomIndex].language;
-    let corrSentence= {sentence: '',language: ''};
+    const wrongHint = sentences[randomIndex].hint2;
+
+    let corrSentence= {sentence: '',language: '',hint: ''};
     corrSentence.sentence = randomSentence;
     corrSentence.language = correctLanguage;
+    corrSentence.hint2 = wrongHint;
+    //console.log(sentences.hint)
     return corrSentence;
 }
 
