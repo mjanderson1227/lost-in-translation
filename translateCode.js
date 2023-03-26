@@ -6,31 +6,46 @@ const sentences = [
     { sentence: "你好，你好吗？", language: "Chinese" },
     { sentence: "こんにちは、お元気ですか？", language: "Japanese" },
 ];
+function randomSentence(sentences)
+{
+    // Select a random sentence from the list
+    
+    const randomIndex = Math.floor(Math.random() * sentences.length);
+    const randomSentence = sentences[randomIndex].sentence;
+    const correctLanguage = sentences[randomIndex].language;
 
+    let corrSentence
+    corrSentence.lang = correctLanguage
+    corrSentence.sentence= randomSentence
+    return corrSentence
+}
+function sentencePrompt(randomSentence){
+    // Prompt the user to input the corresponding language
+    const userLanguage = prompt(`What language is this sentence written in? \n\n"${randomSentence}"`);
+    return userLanguage;
+
+}
 function winCheck()
 {
+    let correctSentence = randomSentence(sentences);
+    let userLanguage = sentencePrompt(correctSentence.sentence)
     // Check if the user's answer is correct and provide feedback
-    if (userLanguage.toLowerCase() === correctLanguage.toLowerCase()) {
+    if (userLanguage.toLowerCase() === correctSentence.lang.toLowerCase()) {
         alert("Correct!");
     
     } else {
-        alert(`Sorry, the correct answer was ${correctLanguage}.`);
+        alert(`Sorry, the correct answer was ${correctSentence.lang}.`);
     }
 
 }
 
-// Select a random sentence from the list
-const randomIndex = Math.floor(Math.random() * sentences.length);
-const randomSentence = sentences[randomIndex].sentence;
-const correctLanguage = sentences[randomIndex].language;
 
 
-function sentencePrompt(){
-    // Prompt the user to input the corresponding language
-    const userLanguage = prompt(`What language is this sentence written in? \n\n"${randomSentence}"`);
 
-}
+correctSentence = randomSentence(sentences)
+sentencePrompt(sentences[0].sentence)
 
+//winCheck();
 
 
 
