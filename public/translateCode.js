@@ -2,11 +2,12 @@
 let sentences = []
 async function getData()
 {
-    const res = await fetch("./Sentences.json")
-    sentences=await res.json()
+    const res = await fetch("https://api.jsonbin.io/v3/b/64200172ebd26539d09c6c7a")
+    let data = await res.json()
+    sentences= data.record;
 }
 
-let count = 0;
+let count=0;
 
 function winCheck(userLanguage, correctLanguage)
 {
@@ -19,13 +20,17 @@ function winCheck(userLanguage, correctLanguage)
         count++
 
 
+
+
     } else {
         //alert(`Sorry, the correct answer was ${correctLanguage}.`);
         document.getElementById("win").innerHTML=`Sorry, the correct answer was ${correctLanguage}.`
         //SAVE COUNT TO DATABASE
         count = 0;
     }
+
     console.log(count)
+
 }
 
 
@@ -42,9 +47,12 @@ function sentenceSelect() {
 
 function sentencePrompt(){
     // Prompt the user to input the corresponding language
+
     const sen = sentenceSelect()
     document.getElementById("sentenceID").innerHTML = sen.sentence;
    //const userLanguage = prompt(`What language is this sentence written in? \n\n"${sen.sentence}"`);
+
+
 
     //winCheck(userLanguage, sen.language);
     let button = document.getElementById("submit")
@@ -54,20 +62,16 @@ function sentencePrompt(){
         winCheck(userLanguage,sen.language);
         document.getElementById("text-input").value = ""
         document.getElementById("countID").innerHTML = `Streak: ${Number(count)}`;
-    }
-    )
-
-    console.log(count)
+    })
 
 
 }
 async function main()
 {
+
     await getData();
     sentencePrompt()
-    while(count>0){
-        sentencePrompt()
-    }
+
 
 
 }
