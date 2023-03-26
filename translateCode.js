@@ -33,6 +33,7 @@ function sentenceSelect() {
 function sentencePrompt(){
     // Prompt the user to input the corresponding language
     const sen = sentenceSelect()
+    document.getElementById("sentenceID").innerHTML = sen.sentence;
     const userLanguage = prompt(`What language is this sentence written in? \n\n"${sen.sentence}"`);
     winCheck(userLanguage, sen.language);
 
