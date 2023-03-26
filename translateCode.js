@@ -1,14 +1,16 @@
 // Define a list of sentences and their corresponding languages
-const sentences = [
-    { sentence: "Hello, how are you?", language: "English" },
-    { sentence: "Bonjour, comment ça va?", language: "French" },
-    { sentence: "Hola, cómo estás?", language: "Spanish" },
-    { sentence: "你好，你好吗？", language: "Chinese" },
-    { sentence: "こんにちは、お元気ですか？", language: "Japanese" },
-];
+let sentences = []
+async function getData()
+{
+    const res = await fetch("./Sentences.json")
+    sentences=await res.json()
+}
+
 let count = 0;
+
 function winCheck(userLanguage, correctLanguage)
 {
+
     console.log("wincheck")
     // Check if the user's answer is correct and provide feedback
     if (userLanguage.toLowerCase() === correctLanguage.toLowerCase()) {
@@ -36,7 +38,9 @@ function sentenceSelect() {
     return corrSentence;
 }
 
-function sentencePrompt(){
+async function sentencePrompt(){
+    await getData();
+
     // Prompt the user to input the corresponding language
     const sen = sentenceSelect()
     document.getElementById("sentenceID").innerHTML = sen.sentence;
