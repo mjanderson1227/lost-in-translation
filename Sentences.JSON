@@ -6,63 +6,63 @@
     },
     
     {
-        "sentence": "",
+        "sentence": "hau",
         "language": "Hausa",
         "hint": ["", "", ""],
         "Translation": "Do you want to? I want to. Are you coming or not?"
     },
 
     {
-        "sentence": "",
+        "sentence": "amhar",
         "language": "Amharic",
         "hint": ["", "", ""],
         "Translation": "Thank you very much! How are you?"
     },
 
     {
-        "sentence": "",
+        "sentence": "man",
         "language": "Mandarin",
         "hint": ["", "", ""],
         "Translation": "I live in Beijing. Do you also live in Beijing?"
     },
 
     {
-        "sentence": "",
+        "sentence": "hindi",
         "language": "Hindi",
         "hint": ["", "", ""],
         "Translation": "How are you? I am fine. What is your name?"
     },
 
     {
-        "sentence": "",
+        "sentence": "arabic",
         "language": "Arabic",
         "hint": ["", "", ""],
         "Translation": "I am interested in learning Arabic language. Are you an Arabic speaker?"
     },
 
     {
-        "sentence": "",
+        "sentence": "engl",
         "language": "English",
         "hint": ["", "", ""],
         "Translation": "Would you like to go out to eat tonight?"
     },
 
     {
-        "sentence": "",
+        "sentence": "span",
         "language": "Spanish",
         "hint": ["", "", ""],
         "Translation": "What time is it? It's 2:30 in the afternoon. Do you like to dance salsa?"
     },
 
     {
-        "sentence": "",
+        "sentence": "fre",
         "language": "French",
         "hint": ["", "", ""],
         "Translation": ""
     },
 
     {
-        "sentence": "",
+        "sentence": "ger",
         "language": "German",
         "hint": ["", "", ""],
         "Translation": ""
