@@ -1,73 +1,70 @@
-{
-    "sentence":
-    [{
-        "Phrase": "Siku njema! Tafadhali nipe maji.",
-        "Language": "Swahili",
+[{
+        "sentence": "Siku njema! Tafadhali nipe maji.",
+        "language": "Swahili",
         "hint": ["", "", ""],
         "Translation": "Have a good day! Please give me some water."
     },
     
     {
-        "Phrase": "",
-        "Language": "Hausa",
+        "sentence": "",
+        "language": "Hausa",
         "hint": ["", "", ""],
         "Translation": "Do you want to? I want to. Are you coming or not?"
     },
 
     {
-        "Phrase": "",
-        "Language": "Amharic",
+        "sentence": "",
+        "language": "Amharic",
         "hint": ["", "", ""],
         "Translation": "Thank you very much! How are you?"
     },
 
     {
-        "Phrase": "",
-        "Language": "Mandarin",
+        "sentence": "",
+        "language": "Mandarin",
         "hint": ["", "", ""],
         "Translation": "I live in Beijing. Do you also live in Beijing?"
     },
 
     {
-        "Phrase": "",
-        "Language": "Hindi",
+        "sentence": "",
+        "language": "Hindi",
         "hint": ["", "", ""],
         "Translation": "How are you? I am fine. What is your name?"
     },
 
     {
-        "Phrase": "",
-        "Language": "Arabic",
+        "sentence": "",
+        "language": "Arabic",
         "hint": ["", "", ""],
         "Translation": "I am interested in learning Arabic language. Are you an Arabic speaker?"
     },
 
     {
-        "Phrase": "",
-        "Language": "English",
+        "sentence": "",
+        "language": "English",
         "hint": ["", "", ""],
         "Translation": "Would you like to go out to eat tonight?"
     },
 
     {
-        "Phrase": "",
-        "Language": "Spanish",
+        "sentence": "",
+        "language": "Spanish",
         "hint": ["", "", ""],
         "Translation": "What time is it? It's 2:30 in the afternoon. Do you like to dance salsa?"
     },
 
     {
-        "Phrase": "",
-        "Language": "French",
+        "sentence": "",
+        "language": "French",
         "hint": ["", "", ""],
         "Translation": ""
     },
 
     {
-        "Phrase": "",
-        "Language": "German",
+        "sentence": "",
+        "language": "German",
         "hint": ["", "", ""],
         "Translation": ""
     }
     ]
-}

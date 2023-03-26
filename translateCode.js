@@ -6,18 +6,24 @@ const sentences = [
     { sentence: "你好，你好吗？", language: "Chinese" },
     { sentence: "こんにちは、お元気ですか？", language: "Japanese" },
 ];
-
+let count = 0;
 function winCheck(userLanguage, correctLanguage)
 {
+    console.log("wincheck")
     // Check if the user's answer is correct and provide feedback
     if (userLanguage.toLowerCase() === correctLanguage.toLowerCase()) {
-        alert("Correct!");
+        //alert("Correct!");
+        document.getElementById("win").innerHTML="Correct"
+        count++
+
 
     } else {
-        alert(`Sorry, the correct answer was ${correctLanguage}.`);
+        //alert(`Sorry, the correct answer was ${correctLanguage}.`);
+        document.getElementById("win").innerHTML=`Sorry, the correct answer was ${correctLanguage}.`
     }
-
+    console.log(count)
 }
+
 
 function sentenceSelect() {
     // Select a random sentence from the list
@@ -34,8 +40,18 @@ function sentencePrompt(){
     // Prompt the user to input the corresponding language
     const sen = sentenceSelect()
     document.getElementById("sentenceID").innerHTML = sen.sentence;
-    const userLanguage = prompt(`What language is this sentence written in? \n\n"${sen.sentence}"`);
-    winCheck(userLanguage, sen.language);
+   //const userLanguage = prompt(`What language is this sentence written in? \n\n"${sen.sentence}"`);
+
+    //winCheck(userLanguage, sen.language);
+    let button = document.getElementById("submit")
+    button.addEventListener('click', function() {
+        const userLanguage = document.getElementById("text-input").value;
+        winCheck(userLanguage,sen.language);
+        document.getElementById("countID").innerHTML = Number(count);
+    }
+    )
+
+    console.log(count)
 
 
 }
