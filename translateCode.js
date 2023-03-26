@@ -7,7 +7,7 @@ const sentences = [
     { sentence: "こんにちは、お元気ですか？", language: "Japanese" },
 ];
 
-function winCheck(userLanguage)
+function winCheck(userLanguage, correctLanguage)
 {
     // Check if the user's answer is correct and provide feedback
     if (userLanguage.toLowerCase() === correctLanguage.toLowerCase()) {
@@ -19,16 +19,23 @@ function winCheck(userLanguage)
 
 }
 
-// Select a random sentence from the list
-const randomIndex = Math.floor(Math.random() * sentences.length);
-const randomSentence = sentences[randomIndex].sentence;
-const correctLanguage = sentences[randomIndex].language;
-
+function sentenceSelect() {
+    // Select a random sentence from the list
+    const randomIndex = Math.floor(Math.random() * sentences.length);
+    const randomSentence = sentences[randomIndex].sentence;
+    const correctLanguage = sentences[randomIndex].language;
+    let corrSentence= {sentence: '',language: ''};
+    corrSentence.sentence = randomSentence;
+    corrSentence.language = correctLanguage;
+    return corrSentence;
+}
 
 function sentencePrompt(){
     // Prompt the user to input the corresponding language
-    const userLanguage = prompt(`What language is this sentence written in? \n\n"${randomSentence}"`);
-    winCheck(userLanguage);
+    const sen = sentenceSelect()
+    const userLanguage = prompt(`What language is this sentence written in? \n\n"${sen.sentence}"`);
+    winCheck(userLanguage, sen.language);
+
 
 }
 
