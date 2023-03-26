@@ -23,7 +23,6 @@ const userLanguage = prompt(`What language is this sentence written in? \n\n"${r
 // Check if the user's answer is correct and provide feedback
 if (userLanguage.toLowerCase() === correctLanguage.toLowerCase()) {
     alert("Correct!");
-    playAudio();
 
 } else {
     alert(`Sorry, the correct answer was ${correctLanguage}.`);
@@ -39,5 +38,9 @@ if (ua.indexOf('safari') != -1) {
     }
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cab36faead9d9e536cc8d23adeeacf7221e350db
 
 
