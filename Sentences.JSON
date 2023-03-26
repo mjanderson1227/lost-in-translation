@@ -6,65 +6,58 @@
     },
     
     {
-        "sentence": "",
+        "sentence": "Kana so? Ina so. Ka ji ko?",
         "language": "Hausa",
         "hint": ["", "", ""],
         "Translation": "Do you want to? I want to. Are you coming or not?"
     },
 
     {
-        "sentence": "",
+        "sentence": "Betam amesegenallo! Aychalhu?",
         "language": "Amharic",
         "hint": ["", "", ""],
         "Translation": "Thank you very much! How are you?"
     },
 
     {
-        "sentence": "",
+        "sentence": "Wǒ zhù zài Běijīng. Nǐ yě zhù zài Běijīng ma?",
         "language": "Mandarin",
         "hint": ["", "", ""],
         "Translation": "I live in Beijing. Do you also live in Beijing?"
     },
 
     {
-        "sentence": "",
+        "sentence": "Kya haal hai? Main theek hoon. Tumhara naam kya hai?",
         "language": "Hindi",
         "hint": ["", "", ""],
         "Translation": "How are you? I am fine. What is your name?"
     },
 
     {
-        "sentence": "",
+        "sentence": "Ana mit'allaq bi-taalim al-lughah al-'arabiya. Hal anta mutakallim al-'arabiya?",
         "language": "Arabic",
         "hint": ["", "", ""],
         "Translation": "I am interested in learning Arabic language. Are you an Arabic speaker?"
     },
 
     {
-        "sentence": "",
+        "sentence": "How was your day? It was great, thanks for asking. Would you like to go out to eat tonight?",
         "language": "English",
         "hint": ["", "", ""],
         "Translation": "Would you like to go out to eat tonight?"
     },
 
     {
-        "sentence": "",
+        "sentence": "¿Qué hora es? Son las dos y media de la tarde. ¿Te gusta bailar salsa?",
         "language": "Spanish",
         "hint": ["", "", ""],
         "Translation": "What time is it? It's 2:30 in the afternoon. Do you like to dance salsa?"
     },
 
     {
-        "sentence": "",
+        "sentence": "Je suis fatigué aujourd'hui. J'ai besoin de me reposer. Qu'est-ce que tu vas faire ce soir?",
         "language": "French",
         "hint": ["", "", ""],
-        "Translation": ""
-    },
-
-    {
-        "sentence": "",
-        "language": "German",
-        "hint": ["", "", ""],
-        "Translation": ""
+        "Translation": "I am tired today. I need to rest. What are you going to do tonight?"
     }
     ]
