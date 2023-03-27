@@ -3,10 +3,9 @@ import { initializeApp } from "firebase/app";
 import { collection, addDoc, getDocs} from "firebase/firestore"; 
 
 // Export the files to be used in ./translateCode.js
-export { writeDB, readDB }
+export { updateLeaderboard, getLeaderboard }
 
 // Our web server's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
     apiKey: "AIzaSyBpH9oyqzBc_ybC6Nl3nDZLnfVX_K73mdo",
     authDomain: "hack-street-boys.firebaseapp.com",
@@ -23,14 +22,23 @@ const app = initializeApp(firebaseConfig);
 // Get a reference to the database service
 const db = getFirestore(app);
 
+// Data Members of the Database
+class User {
+    constructor(name, score) {
+        this.name = name;
+        this.score = score;
+    }
+
+    toString() {
+        return this.name + ", " + this.score;
+    }
+}
 
 // Add to database
-async function writeDB(userName, userScore) {
+async function updateLeaderboard(userName, userScore) {
     try {
-        const docRef = await addDoc(collection(db, "leaderboard"), {
-            name: userName,
-            score: userScore
-        });
+        // Add a new document in collection "leaderboard"
+        const docRef = await addDoc(collection(db, "/leaderboard"), new User(userName, userScore)); 
         console.log("Document written with ID: ", docRef.id);
     } catch (e) {
         console.error("Error adding document: ", e);
@@ -38,9 +46,9 @@ async function writeDB(userName, userScore) {
 }
 
 // Read From Database
-async function readDB() {
-    const querySnapshot = await getDocs(collection(db, "leaderboard"));
-    querySnapshot.forEach((doc) => {
-        console.log(`${doc.id} => ${doc.data()}`);
+async function getLeaderboard() {
+    const collectionRef = collection(db, "leaderboard");
+    getDocs(collectionRef).then((snapshot) => {
+        console.log(snapshot.docs());
     });
 }

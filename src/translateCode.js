@@ -1,3 +1,5 @@
+import { updateLeaderboard, getLeaderboard } from "./libdb";
+
 async function getData()
 {
     const res = await fetch("https://api.jsonbin.io/v3/b/64200172ebd26539d09c6c7a")
@@ -68,8 +70,9 @@ function sentencePrompt(){
 async function main()
 {
     await getData();
-    sentencePrompt()
+    sentencePrompt();
+    updateLeaderboard("Matthew", 20);
+    getLeaderboard();
 }
-
 
 main();
