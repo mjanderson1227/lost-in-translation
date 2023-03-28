@@ -1,26 +1,22 @@
 <!DOCTYPE html>
 <html>
-    <link rel="stylesheet" href="styles.css">
     <head>
-        <title>Into the Unknown</title>
+        <meta charset="utf-8">
+        <title>Lost in Translation</title>
+        <link rel="icon" href="image/svg+xml" type="favicon.svg"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/> 
     </head>
     <body>
         <div class="child">
-            <h1>Into the Unknown</h1>
-
+            <h1>Lost in Translation</h1>
             <div id="sentenceID"></div><br>
             <div id="win"></div> <br>
             <div id="countID"></div>
-
             <form onsubmit="return false">
                 <label>Language:</label>
-                <!--    <input type="text" id="text-input" name="text-input"><br><br>-->
                 <input type = 'text' list="language-dropdown" id="text-input" placeholder="Type a language...">
-
                 <input id = "submit" type="submit" value="Check"><br><br>
-                <!--    <label for="language-dropdown">Show All Languages:</label>-->
                 <datalist id="language-dropdown" >
-
                     <option value="all">All Languages</option>
                     <option value="english">English</option>
                     <option value="french">French</option>
@@ -34,16 +30,11 @@
                     <option value="amharic">Amharic</option>
                     <option value="hausa">Hausa</option>
                     <option value="Swahili">Swahili</option>
-
                 </datalist>
                 <div id="hintID">Hint: </div>
             </form>
         </div>
-
         <script src="translateCode.js"></script>
         <script src="bundle.js"></script>
-
-
     </body>
-
 </html>
