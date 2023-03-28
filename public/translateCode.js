@@ -29,6 +29,11 @@ async function getData()
     let data = await res.json()
     sentences= data.record;
 }
+function playAudio()
+{
+    let audio = new Audio('./Bugatti_5sec.mp3');
+    audio.play();
+}
 
 let count=0;
 
@@ -40,6 +45,7 @@ function winCheck(userLanguage, correctLanguage)
     if (userLanguage.toLowerCase() === correctLanguage.toLowerCase()) {
         //alert("Correct!");
         document.getElementById("win").innerHTML="Correct"
+        playAudio();
         count++
 
 
