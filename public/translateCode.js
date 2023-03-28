@@ -1,3 +1,5 @@
+let count;
+
 async function getData()
 {
     const res = await fetch("https://api.jsonbin.io/v3/b/64200172ebd26539d09c6c7a")
@@ -10,7 +12,7 @@ function playAudio()
     audio.play();
 }
 
-let count;
+
 
 function winCheck(userLanguage, sen)
 {
@@ -19,7 +21,6 @@ function winCheck(userLanguage, sen)
     if (userLanguage.toLowerCase() === sen.language.toLowerCase()) {
         //alert("Correct!");
         document.getElementById("win").innerHTML="Correct"
-        playAudio();
         count++
         location.reload();
 
@@ -33,7 +34,7 @@ function winCheck(userLanguage, sen)
         document.getElementById("hintID").innerHTML = 'Hint: ' +sen.hint[randomHint];
 
     }
-    localStorage.setItem("currentCount", count)
+    sessionStorage.setItem("currentCount", count)
 }
 
 
@@ -60,7 +61,7 @@ function sentencePrompt(){
     document.getElementById("sentenceID").innerHTML = sen.sentence;
 
    //const userLanguage = prompt(`What language is this sentence written in? \n\n"${sen.sentence}"`);
-    count = localStorage.getItem("currentCount")
+    count = sessionStorage.getItem("currentCount")
     document.getElementById("countID").innerHTML = `Streak: ${Number(count)}`;
 
     let button = document.getElementById("submit")
@@ -69,6 +70,7 @@ function sentencePrompt(){
         winCheck(userLanguage,sen);
         document.getElementById("text-input").value = ""
         document.getElementById("countID").innerHTML = `Streak: ${Number(count)}`;
+        //playAudio();
     })
 }
 async function main()
