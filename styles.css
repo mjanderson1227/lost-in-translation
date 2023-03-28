@@ -1,0 +1,65 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Delicious+Handrawn&family=Fuzzy+Bubbles:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cabin&family=Delicious+Handrawn&display=swap');
+
+* {
+
+    text-align: center;
+    
+    }
+
+h1{
+    font-family: 'Fuzzy Bubbles',cursive;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 50px;
+    line-height: 1.15;
+    letter-spacing: -.02em;
+    color: rgba(121, 195, 253, 0.8);
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+    
+
+}
+.app-container{
+    color: orange;
+    font-family: 'Cabin', sans-serif;
+    font-size: 24px;
+    margin: 25px;
+    width: 350px;
+    height: 200px;
+    /*outline: dashed 1px black;
+    /* Setup */
+    position: relative;
+    position: center;
+    
+}
+.container {
+    font-family: 'Cabin', sans-serif;
+    font-size: 24px;
+    margin: 25px;
+    width: 350px;
+    height: 200px;
+    outline: dashed 1px black;
+    /* Setup */
+    position: relative;
+    
+}
+
+.child {
+   /* width: 50px;
+    height: 50px;*/
+    border-radius: 25px;
+    font-family: 'Cabin', sans-serif;
+    font-size: 18px;
+    background-color: rgb(221, 221, 221);
+    /* Center vertically and horizontally */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+    
+}
