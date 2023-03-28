@@ -4,8 +4,9 @@
   "description": "RowdyHacks 2023 Group Hackathon Project",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
     "deploy": "firebase deploy --only hosting, firestore"
   },
   "keywords": [],
@@ -13,7 +14,6 @@
   "license": "ISC",
   "devDependencies": {
     "firebase": "^9.18.0",
-    "webpack": "^5.76.3",
-    "webpack-cli": "^5.0.1"
+    "vite": "^4.2.1"
   }
 }
