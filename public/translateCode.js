@@ -1,4 +1,5 @@
 let count;
+let sentences;
 
 async function getData()
 {
@@ -9,12 +10,31 @@ async function getData()
 function playAudio()
 {
     let audio = new Audio('./Bugatti_5sec.mp3');
-    audio.play();
+    return new Promise(res=>{
+        audio.play();
+        audio.onended = res;
+    })
+    
+    
 }
 
+function loadLang()
+{
+    let dropdown = document.getElementById("language-dropdown");
+    let option = document.createElement("option");
+    for(let i in sentences)
+    {
+        option.text = sentences[i].language;
+        option.value = sentences[i].language;
+        dropdown.appendChild(new Option(sentences[i].language,sentences[i].language));
+        
+        console.log(sentences[i].language);
 
+    }
 
-function winCheck(userLanguage, sen)
+}
+
+async function winCheck(userLanguage, sen)
 {
 
     // Check if the user's answer is correct and provide feedback
@@ -22,6 +42,7 @@ function winCheck(userLanguage, sen)
         //alert("Correct!");
         document.getElementById("win").innerHTML="Correct"
         count++
+        await playAudio()
         location.reload();
 
     } else {
@@ -59,6 +80,7 @@ function sentencePrompt(){
     // Prompt the user to input the corresponding language
     let sen = sentenceSelect()
     document.getElementById("sentenceID").innerHTML = sen.sentence;
+    loadLang();
 
    //const userLanguage = prompt(`What language is this sentence written in? \n\n"${sen.sentence}"`);
     count = sessionStorage.getItem("currentCount")
@@ -70,7 +92,7 @@ function sentencePrompt(){
         winCheck(userLanguage,sen);
         document.getElementById("text-input").value = ""
         document.getElementById("countID").innerHTML = `Streak: ${Number(count)}`;
-        //playAudio();
+        
     })
 }
 async function main()
